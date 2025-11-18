@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h1>Testing API Connection</h1>
+    <button onclick="testAPI()">Test API</button>
+    <div id="result"></div>
+    
+    <script>
+        async function testAPI() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Testing...';
+            
+            try {
+                // Test health endpoint
+                const healthRes = await fetch('http://localhost:5001/health');
+                const healthData = await healthRes.json();
+                resultDiv.innerHTML += '<p>✅ Health: ' + JSON.stringify(healthData) + '</p>';
+                
+                // Test courses endpoint
+                const coursesRes = await fetch('http://localhost:5001/api/courses');
+                const coursesData = await coursesRes.json();
+                resultDiv.innerHTML += '<p>✅ Courses: Got ' + coursesData.length + ' courses</p>';
+                
+                // Test login
+                const loginRes = await fetch('http://localhost:5001/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: 'learner@test.com', password: 'password' })
+                });
+                const loginData = await loginRes.json();
+                resultDiv.innerHTML += '<p>✅ Login: ' + loginData.user.name + ' logged in</p>';
+                
+            } catch (error) {
+                resultDiv.innerHTML += '<p>❌ Error: ' + error.message + '</p>';
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,9 @@
+{
+<<<<<<< HEAD
+  "name": "Copy of Copy of AutoLearnPro",
+=======
+  "name": "Copy of AutoLearnPro",
+>>>>>>> a912287 (Added Firebase Cloud Functions backend and integrated course creation)
+  "description": "An online learning platform dedicated to the automotive domain, offering courses for learners, tools for trainers to create content, and a comprehensive dashboard for administrators.",
+  "requestFramePermissions": []
+}
