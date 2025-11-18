@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "copy-of-copy-of-autolearnpro",
-=======
   "name": "copy-of-autolearnpro",
->>>>>>> a912287 (Added Firebase Cloud Functions backend and integrated course creation)
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,16 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "@google/genai": "^1.29.1",
-=======
     "@google/genai": "^1.29.1",
     "firebase": "^12.6.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
->>>>>>> a912287 (Added Firebase Cloud Functions backend and integrated course creation)
     "react-router-dom": "^7.9.6"
   },
   "devDependencies": {
